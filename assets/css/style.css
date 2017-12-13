@@ -1,0 +1,168 @@
+
+
+body {
+	display: block;
+	background: #fff;
+}
+
+header {
+	background: #000;
+}
+
+ul, ol {
+	margin-bottom: 0px;
+}
+
+.clearFix {
+	clear: both;
+}
+
+#headerLeft {
+	color: white;
+	font-size: 18pt;
+	font-weight: bold;
+	line-height: 40px;
+}
+
+#headerRight {
+	color: white;
+	font-size: 16pt;
+	font-weight: bold;
+	line-height: 40px;
+	text-align: right;
+	font-family: "comic sans ms";
+}
+
+#overlayImg {
+	width: 100%;
+}
+
+#overlay {
+	position: absolute;
+	top: 40px;
+	left: 0px;
+	z-index: 1000;
+}
+
+#messageBox {
+	position: absolute;
+	top: 60px;
+	left: 200px;
+	height: 400px;
+	width: 800px;
+	background: black;
+	opacity: .8;
+	color: white;
+	border: 5px solid grey;
+	padding: 20px;
+	text-align: center;
+	font-size: 10pt;
+}
+
+#instructionList {
+	text-align: left;
+	list-style-type: circle;
+	padding: 20px;
+}
+
+.messageBtn {
+	position: absolute;
+	top: 400px;
+	left: 550px;
+}
+
+#backgroundImg {
+	width: 100%;
+	z-index: 100;
+}
+
+.board {
+	position: absolute;
+	top: 50px;
+	left: 45px;
+	z-index: 500;
+}
+
+.col-left {
+	}
+
+.col-mid {
+	}
+
+.col-right {
+	}
+
+.col-title {
+	background: grey;
+	font-size: 14pt;
+	font-weight: bold;
+	color: black;
+	line-height: 30px;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.char-row {
+	border: 5px solid grey;
+	margin-bottom: 5px;
+}
+
+.char-attr {
+	padding: 10px;
+	margin-bottom: 0px;
+}
+
+.summary-info {
+	background: black;
+	opacity: 0.6;
+	color: white;
+	font-size: 9pt;
+	text-align: center;
+}
+
+.char-image {
+	width: 70px;
+	height: 90px;
+}
+
+.vs-char-image {
+	width: 140px;
+	height: 180px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.roll-history {
+	background: black;
+	opacity: 0.6;
+	color: white;
+	font-size: 9pt;
+	text-align: left;
+	height: 140px;
+	margin-top: 10px;
+	overflow: auto;
+}
+
+.roll-btn {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+}
+
+
+
+
+
+footer {
+	position: relative;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	color: white;
+	background: black;
+	font-size: 10pt;
+	font-weight: bold;
+	line-height: 50px;
+}

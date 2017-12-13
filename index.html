@@ -1,0 +1,341 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Star Wars RPG Demo - by Brendan Scruggs</title>
+		<link rel="stylesheet" href="assets/css/reset.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/style.css">
+	</head>
+
+	<body>
+
+		<header>
+
+			<div class="container">
+
+				<div class="row">
+
+					<div class="col-xs-12 col-sm-8" id="headerLeft">
+						A STAR WARS RPG THROWDOWN
+					</div>
+
+					<div class="col-xs-12 col-sm-4" id="headerRight">Jedis vs Siths
+					</div>
+
+				</div>
+
+			</div>
+
+		</header>
+
+		<div id="overlay">
+			
+			<img id="overlayImg" src="assets/images/star-wars-backdrop.jpg">
+
+			<div id="messageBox">
+				<H3>INSTRUCTIONS</H3>
+				You ready for the lightsaber swingingest, Sith Lord shockingest, Jedi knight stompingest throwdown ever?  You've come to the right place.  Here's how this is going to work:
+
+				<ol id="instructionList">
+					<li>Choose a Jedi to fight first by clicking one of the characters on the left.</li>
+					<li>The Sith will come at you in order one at a time.  Click the "ROLL" button to initate each round of the fight.  The results of each round will be displayed in the roll history.</li>
+					<li>The Sith Lord will attack your Jedi first because, as Yoda taught Luke, "a Jedi uses the force for knowledge and defense, never for attack".</li>
+					<li>After being attacked, your Jedi will counter-attack the Sith.  Health is reduced immediately on attack and counter.</li>
+					<li>When a character's health has reached 0, they are out of the fight.  For Jedi, you'll need to choose the next knight up by clicking another Jedi not already eliminated from the fight.</li>
+					<li>The goal is to defeat all of the Sith before all of your Jedi have been eliminated from the fight.</li>
+					<li>HINT: If you know how the Sith were actually defeated, you'll be able to win this game.</li>
+				</ol>
+
+			</div>
+
+			<button type="button" class="btn btn-default messageBtn">CONTINUE</button>
+
+		</div>
+
+		<main>
+			<img id="backgroundImg" src="assets/images/star-wars-backdrop.jpg">
+
+			<div class="container board">
+
+				<div class="row">
+
+					<div class="col-sm-3 col-left">
+
+						<div class="row">
+
+							<div class="col-sm-12 col-title">
+								Jedis
+							</div>
+
+						</div>
+
+						<div class="row jedi char-row char-1">
+
+							<div class="col-sm-8 jedi char-1 char-attr">
+
+								<ul>
+									<li class="summary-info jedi char-1 name"></li>
+									<li class="summary-info jedi char-1 health"></li>
+									<li class="summary-info jedi char-1 attack"></li>
+									<li class="summary-info jedi char-1 counter"></li>
+								</ul>
+
+							</div>
+
+							<div class="col-sm-4 jedi char-1 char-image-col">
+								
+								<img class="jedi char-1 char-image" src="">
+
+							</div>
+
+						</div>
+
+						<div class="row jedi char-row char-2">
+
+							<div class="col-sm-8 jedi char-2 char-attr">
+
+								<ul>
+									<li class="summary-info jedi char-2 name"></li>
+									<li class="summary-info jedi char-2 health"></li>
+									<li class="summary-info jedi char-2 attack"></li>
+									<li class="summary-info jedi char-2 counter"></li>
+								</ul>
+
+							</div>
+
+							<div class="col-sm-4 jedi char-2 char-image-col">
+								
+								<img class="jedi char-2 char-image" src="">
+
+							</div>
+
+						</div>
+
+						<div class="row jedi char-row char-3">
+
+							<div class="col-sm-8 jedi char-3 char-attr">
+
+								<ul>
+									<li class="summary-info jedi char-3 name"></li>
+									<li class="summary-info jedi char-3 health"></li>
+									<li class="summary-info jedi char-3 attack"></li>
+									<li class="summary-info jedi char-3 counter"></li>
+								</ul>
+
+							</div>
+
+							<div class="col-sm-4 jedi char-3 char-image-col">
+								
+								<img class="jedi char-3 char-image" src="">
+
+							</div>
+
+						</div>
+
+						<div class="row jedi char-row char-4">
+
+							<div class="col-sm-8 jedi char-4 char-attr">
+
+								<ul>
+									<li class="summary-info jedi char-4 name"></li>
+									<li class="summary-info jedi char-4 health"></li>
+									<li class="summary-info jedi char-4 attack"></li>
+									<li class="summary-info jedi char-4 counter"></li>
+								</ul>
+
+							</div>
+
+							<div class="col-sm-4 jedi char-4 char-image-col">
+								
+								<img class="jedi char-4 char-image" src="">
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="col-sm-6 col-mid">
+
+						<div class="row">
+
+							<div class="col-sm-1"></div>
+
+							<div class="col-sm-10">
+
+								<div class="row">
+
+									<div class="col-sm-12 col-title">
+										VS.
+									</div>
+
+								</div>
+
+								<div class="row">
+
+									<div class="col-sm-6 jedi vs-char-image-col">
+
+										<img class="jedi vs-char-image" src="assets/images/silhouette.png">
+
+									</div>
+
+									<div class="col-sm-6 sith vs-char-image-col">
+
+										<img class="sith vs-char-image" src="assets/images/silhouette.png">
+
+									</div>
+
+								</div>
+
+								<div class="row">
+									
+									<div class="col-sm-6 jedi vs-char char-attr">
+										<ul>
+											<li class="summary-info jedi vs-char name"></li>
+											<li class="summary-info jedi vs-char health"></li>
+											<li class="summary-info jedi vs-char attack"></li>
+											<li class="summary-info jedi vs-char counter"></li>
+										</ul>
+									</div>
+
+									<div class="col-sm-6 sith vs-char char-attr">
+										<ul>
+											<li class="summary-info sith vs-char name"></li>
+											<li class="summary-info sith vs-char health"></li>
+											<li class="summary-info sith vs-char attack"></li>
+											<li class="summary-info sith vs-char counter"></li>
+										</ul>
+									</div>
+
+								</div>
+
+								<div class="row">
+									
+									<div class="col-sm-12 roll-history">
+										<strong>ROLL HISTORY</strong>
+
+									</div>
+
+								</div>
+
+								<div class="row">
+									<button type="button" class="btn btn-default roll-btn">ROLL</button>
+								</div>
+
+							</div>
+
+							<div class="col-sm-1"></div>
+							
+						</div>
+
+					</div>
+
+					<div class="col-sm-3 col-right">
+
+						<div class="row">
+
+							<div class="col-sm-12 col-title">
+								Siths
+							</div>
+
+						</div>
+
+						<div class="row char-row">
+
+							<div class="col-sm-4 sith char-1 char-image-col">
+								
+								<img class="sith char-1 char-image" src="">
+
+							</div>
+
+							<div class="col-sm-8 sith char-1 char-attr">
+
+								<ul>
+									<li class="summary-info sith char-1 name"></li>
+									<li class="summary-info sith char-1 health"></li>
+									<li class="summary-info sith char-1 attack"></li>
+									<li class="summary-info sith char-1 counter"></li>
+								</ul>
+
+							</div>
+
+						</div>
+
+						<div class="row char-row">
+
+							<div class="col-sm-4 sith char-2 char-image-col">
+								
+								<img class="sith char-2 char-image" src="">
+
+							</div>
+
+							<div class="col-sm-8 sith char-2 char-attr">
+
+								<ul>
+									<li class="summary-info sith char-2 name"></li>
+									<li class="summary-info sith char-2 health"></li>
+									<li class="summary-info sith char-2 attack"></li>
+									<li class="summary-info sith char-2 counter"></li>
+								</ul>
+
+							</div>
+
+						</div>
+
+						<div class="row char-row">
+
+							<div class="col-sm-4 sith char-3 char-image-col">
+								
+								<img class="sith char-3 char-image" src="">
+
+							</div>
+
+							<div class="col-sm-8 sith char-3 char-attr">
+
+								<ul>
+									<li class="summary-info sith char-3 name"></li>
+									<li class="summary-info sith char-3 health"></li>
+									<li class="summary-info sith char-3 attack"></li>
+									<li class="summary-info sith char-3 counter"></li>
+								</ul>
+
+							</div>
+
+						</div>
+
+						<div class="row char-row">
+
+							<div class="col-sm-4 sith char-4 char-image-col">
+								
+								<img class="sith char-4 char-image" src="">
+
+							</div>
+
+							<div class="col-sm-8 sith char-4 char-attr">
+
+								<ul>
+									<li class="summary-info sith char-4 name"></li>
+									<li class="summary-info sith char-4 health"></li>
+									<li class="summary-info sith char-4 attack"></li>
+									<li class="summary-info sith char-4 counter"></li>
+								</ul>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</main>
+
+		<footer>&copy;2017 Brendan Scruggs
+		</footer>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="assets/javascript/game.js"></script>
+	</body>
+</html>
