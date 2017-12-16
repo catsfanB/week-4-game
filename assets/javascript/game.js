@@ -528,7 +528,7 @@ function jediCounter() {
 	// Update roll history with the new attack value
 	var rollHistoryOld = rollHistory.html();
 	var rollHistoryNew = rollHistoryOld +		
-		jedis[jediVsChar].Name + " has grown stronger with the force.  His attack strength has increased to " + jedis[jediVsChar].Counter +"<br>";
+		jedis[jediVsChar].Name + " has grown stronger with the force.  His counter strength has increased to " + jedis[jediVsChar].Counter +"<br>";
 
 	rollHistory.html(rollHistoryNew);
 
